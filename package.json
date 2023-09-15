@@ -1,0 +1,66 @@
+{
+  "name": "roku-dev",
+  "version": "0.1.0",
+  "description": "Roku developer helper tools",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
+    "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json --skipLibCheck",
+    "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json --skipLibCheck",
+    "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
+    "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json --skipLibCheck",
+    "clean": "node tools/cleanup",
+    "lint": "eslint ./",
+    "tsvalidate": "tsc --noEmit --skipLibCheck",
+    "validate": "npm run lint && npm run tsvalidate"
+  },
+  "bin": {
+    "roku": "dist/cjs/src/cli/index.js"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "umd:main": "dist/umd/index.js",
+  "types": "dist/types/index.d.js",
+  "keywords": [
+    "cli",
+    "node",
+    "roku"
+  ],
+  "author": "Błażej Chełkowski <blazej.chelkowski@outlook.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bchelkowski/roku-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bchelkowski/roku-dev/issues"
+  },
+  "dependencies": {
+    "@caporal/core": "^2.0.7",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "node-ssdp": "^4.0.1",
+    "uuid": "^9.0.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/form-data": "^2.5.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^20.6.0",
+    "@types/node-ssdp": "^4.0.1",
+    "@types/uuid": "^9.0.3",
+    "@types/xml2js": "^0.4.12",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

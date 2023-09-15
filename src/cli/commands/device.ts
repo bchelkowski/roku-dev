@@ -1,0 +1,16 @@
+import type { CreateCommandParameters, Command } from '@caporal/core';
+import { envVariables } from '../../env/args';
+import deviceInfo from '../../requests/deviceInfo';
+import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
+
+export default function ({ createCommand }: CreateCommandParameters): Command {
+  return createCommand('Shows data of current Roku Device')
+    .option(...getRokuIPOptionDefinition())
+    .action(async ({ logger, options }) => {
+      const device = await deviceInfo({
+        rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
+      });
+
+      logger.info('Device Info: %j', device);
+    });
+}
