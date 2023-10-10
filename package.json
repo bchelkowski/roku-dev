@@ -43,7 +43,6 @@
     "form-data": "^4.0.0",
     "fs-extra": "^11.1.1",
     "minimist": "^1.2.8",
-    "node-ssdp": "^4.0.1",
     "uuid": "^9.0.0",
     "xml2js": "^0.6.2"
   },
@@ -52,7 +51,6 @@
     "@types/fs-extra": "^11.0.1",
     "@types/minimist": "^1.2.2",
     "@types/node": "^20.6.0",
-    "@types/node-ssdp": "^4.0.1",
     "@types/uuid": "^9.0.3",
     "@types/xml2js": "^0.4.12",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
@@ -62,5 +60,15 @@
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   }
 }

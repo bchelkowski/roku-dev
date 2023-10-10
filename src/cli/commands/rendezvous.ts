@@ -8,7 +8,7 @@ import { getCommand, getCommandArgumentDefinition } from '../arguments/command';
 type CommandType = 'track' | 'untrack' | 'log';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows data of all installed apps')
+  return createCommand('Manage rendezvous logging')
     .argument(...getChannelIdArgumentDefinition())
     .argument(...getCommandArgumentDefinition('Command for beacons', {
       default: 'log',

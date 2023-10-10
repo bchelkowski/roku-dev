@@ -8,7 +8,7 @@ import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 import { getSections, getSectionsOptionDefinition } from '../options/sections';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows performance data of active Roku App')
+  return createCommand('Shows registry data')
     .argument(...getChannelIdArgumentDefinition())
     .option(...getEscapedOptionDefinition())
     .option(...getKeysOptionDefinition())

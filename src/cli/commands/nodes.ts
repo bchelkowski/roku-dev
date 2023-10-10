@@ -6,7 +6,7 @@ import { getNodeId, getNodeIdArgumentDefinition } from '../arguments/nodeId';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows data of all installed apps')
+  return createCommand('Returns all/root or finds some rendered nodes')
     .argument(...getTypeArgumentDefinition('Type of returned nodes - can be: all, root or node', {
       default: 'all',
       validator: ['all', 'root', 'find'],

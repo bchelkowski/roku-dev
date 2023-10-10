@@ -18,7 +18,7 @@ const KeyRequest = {
 type KeyType = 'down' | 'press' | 'up';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Download an icon for the specific Roku app')
+  return createCommand('Send key up/down/press')
     .argument(...getKeyArgumentDefinition())
     .argument(...getTypeArgumentDefinition('Type of key event - can be: down, up or press', {
       default: 'down',
