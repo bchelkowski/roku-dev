@@ -1,6 +1,6 @@
 {
   "name": "roku-dev",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Roku developer helper tools",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
@@ -62,7 +62,9 @@
     "webpack-cli": "^5.1.4"
   },
   "release": {
-    "branches": [ "main" ],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
