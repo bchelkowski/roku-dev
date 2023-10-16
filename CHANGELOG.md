@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/bchelkowski/roku-dev/compare/v1.0.1...v1.0.2) (2023-10-16)
+
+
+### Bug Fixes
+
+* ip command option is ignored ([ed0ef21](https://github.com/bchelkowski/roku-dev/commit/ed0ef211a7f1d91eae885a8910b42bdb17973614))
+
 ## [1.0.1](https://github.com/bchelkowski/roku-dev/compare/v1.0.0...v1.0.1) (2023-10-16)
 
 
