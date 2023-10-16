@@ -1,5 +1,8 @@
-const fs = require('fs');
-const Path = require('path');
+import fs from 'fs';
+import Path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const deleteFolderRecursive = (path) => {
   if (fs.existsSync(path)) {
