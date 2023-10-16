@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/bchelkowski/roku-dev/compare/v1.0.4...v1.0.5) (2023-10-16)
+
+
+### Bug Fixes
+
+* add exports and type to package.json ([613c588](https://github.com/bchelkowski/roku-dev/commit/613c588f83987ab0e02356e8d1f9216b7b9c3a85))
+* build error ([f20d48b](https://github.com/bchelkowski/roku-dev/commit/f20d48bb831ef98baf8d4be6a76ad76554aeaa3d))
+
 ## [1.0.4](https://github.com/bchelkowski/roku-dev/compare/v1.0.3...v1.0.4) (2023-10-16)
 
 
