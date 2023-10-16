@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bchelkowski/roku-dev/compare/v1.0.0...v1.0.1) (2023-10-16)
+
+
+### Bug Fixes
+
+* add readme content ([aaeab91](https://github.com/bchelkowski/roku-dev/commit/aaeab912d71437d51630fc6a71124e1d55e27bc8))
+
 # 1.0.0 (2023-10-10)
 
 
