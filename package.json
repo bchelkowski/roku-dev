@@ -15,9 +15,16 @@
   "bin": {
     "roku": "dist/cjs/src/cli/index.js"
   },
+  "type": "module",
   "main": "dist/cjs/src/index.js",
   "module": "dist/esm/src/index.js",
   "types": "dist/types/index.d.js",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/src/index.js",
+      "require": "./dist/commonjs/src/index.cjs"
+    }
+  },
   "keywords": [
     "cli",
     "node",
