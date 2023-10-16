@@ -22,4 +22,3 @@ export { default as replaceApp, ReplaceAppOptions } from './replaceApp';
 export { default as sgNodes, SGNodesOptions } from './sgNodes';
 export { default as signPackage, SignPackageOptions } from './signPackage';
 export { default as textureMemory, TextureMemoryOptions } from './assets';
-export { RokuRemoteKey } from '../utils/RokuRemoteKey.enum';
