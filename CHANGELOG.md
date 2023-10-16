@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/bchelkowski/roku-dev/compare/v1.0.3...v1.0.4) (2023-10-16)
+
+
+### Bug Fixes
+
+* main and module paths are incorrect ([66678f2](https://github.com/bchelkowski/roku-dev/commit/66678f262c4cd6d41d00006a9a6d251c05f4cda1))
+
 ## [1.0.3](https://github.com/bchelkowski/roku-dev/compare/v1.0.2...v1.0.3) (2023-10-16)
 
 

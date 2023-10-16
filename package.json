@@ -1,6 +1,6 @@
 {
   "name": "roku-dev",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Roku developer helper tools",
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:types",
