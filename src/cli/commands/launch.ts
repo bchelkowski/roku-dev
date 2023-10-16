@@ -7,7 +7,7 @@ import { getMediaType, getMediaTypeOptionDefinition } from '../options/mediaType
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Launches Roku App')
+  return createCommand('Launches channel of given channel id with given content id and media type.')
     .argument(...getChannelIdArgumentDefinition())
     .option(...getContentIdOptionDefinition())
     .option(...getMediaTypeOptionDefinition())

@@ -8,7 +8,7 @@ import { getCommand, getCommandArgumentDefinition } from '../arguments/command';
 type CommandType = 'track' | 'untrack' | 'log';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Command for managing beacons')
+  return createCommand('Tracks channel and media lifecycle events for a specific channel.')
     .argument(...getChannelIdArgumentDefinition())
     .argument(...getCommandArgumentDefinition('Command for beacons', {
       default: 'log',

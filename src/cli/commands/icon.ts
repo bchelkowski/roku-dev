@@ -6,7 +6,7 @@ import { getPath, getPathArgumentDefinition } from '../arguments/path';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Downloads an icon for the specific Roku app')
+  return createCommand('Downloads under iconPath an icon file corresponding to the application identified by channelId.')
     .argument(...getChannelIdArgumentDefinition())
     .argument(...getPathArgumentDefinition('Path for Roku app icon .jpg file'))
     .option(...getRokuIPOptionDefinition())

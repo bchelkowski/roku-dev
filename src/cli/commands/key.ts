@@ -18,10 +18,10 @@ const KeyRequest = {
 type KeyType = 'down' | 'press' | 'up';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Send key up/down/press')
+  return createCommand('Sends key press/down/up')
     .argument(...getKeyArgumentDefinition())
     .argument(...getTypeArgumentDefinition('Type of key event - can be: down, up or press', {
-      default: 'down',
+      default: 'press',
       validator: ['down', 'press', 'up'],
     }))
     .option(...getEscapedOptionDefinition())

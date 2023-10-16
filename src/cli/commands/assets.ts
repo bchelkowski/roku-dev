@@ -4,7 +4,7 @@ import assets from '../../requests/assets';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Returns current assets saved in memory')
+  return createCommand('Returns a list of the assets that have been loaded into texture memory')
     .option(...getRokuIPOptionDefinition())
     .action(async ({ logger, options }) => {
       const _assets = await assets({

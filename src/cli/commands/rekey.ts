@@ -7,7 +7,7 @@ import { getPassword as getPasswordOption, getPasswordOptionDefinition } from '.
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Rekeys Roku device with provided signed package and password.')
+  return createCommand('Rekey the Roku device with the given signed package and signing password.')
     .argument(...getPasswordArgumentDefinition())
     .argument(...getPathArgumentDefinition('Path to the signed package'))
     .option(...getPasswordOptionDefinition())

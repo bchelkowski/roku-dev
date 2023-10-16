@@ -4,7 +4,7 @@ import deviceInfo from '../../requests/deviceInfo';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows data of current Roku Device')
+  return createCommand('Retrieves device information similar to that returned by roDeviceInfo')
     .option(...getRokuIPOptionDefinition())
     .action(async ({ logger, options }) => {
       const device = await deviceInfo({

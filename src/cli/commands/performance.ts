@@ -5,7 +5,7 @@ import { getChannelId, getChannelIdArgumentDefinition } from '../arguments/chann
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows performance data of active Roku App')
+  return createCommand('Returns the current memory and CPU utilization of the channel running in the foreground (RAM usage is reported bytes).')
     .argument(...getChannelIdArgumentDefinition())
     .option(...getRokuIPOptionDefinition())
     .action(async ({ args, options, logger }) => {

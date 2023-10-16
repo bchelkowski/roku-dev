@@ -6,7 +6,7 @@ import { getPassword, getPasswordOptionDefinition } from '../options/password';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Uploads archived app file to the device.')
+  return createCommand('Uploads archived (.zip) app to the Roku device.')
     .argument(...getPathArgumentDefinition('Path to the app archive file'))
     .option(...getPasswordOptionDefinition())
     .option(...getRokuIPOptionDefinition())

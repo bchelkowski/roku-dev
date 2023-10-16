@@ -8,7 +8,7 @@ import { getPassword as getPasswordOption, getPasswordOptionDefinition } from '.
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Generate signed Roku app package')
+  return createCommand('Creates and downloads packaged application.')
     .argument(...getAppNameArgumentDefinition())
     .argument(...getPathArgumentDefinition('Path to the Roku app archive'))
     .argument(...getPasswordArgumentDefinition())

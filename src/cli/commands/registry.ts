@@ -8,7 +8,7 @@ import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 import { getSections, getSectionsOptionDefinition } from '../options/sections';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows registry data')
+  return createCommand('Lists the entries in the device registry for a sideloaded channel or production/beta channel linked to the Roku developer\'s account.')
     .argument(...getChannelIdArgumentDefinition())
     .option(...getEscapedOptionDefinition())
     .option(...getKeysOptionDefinition())

@@ -4,7 +4,7 @@ import mediaPlayer from '../../requests/mediaPlayer';
 import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Shows media player data')
+  return createCommand('Returns a child element named \'player\' that identifies the media player state.')
     .option(...getRokuIPOptionDefinition())
     .action(async ({ logger, options }) => {
       const mediaPlayerData = await mediaPlayer({

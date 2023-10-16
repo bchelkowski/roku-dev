@@ -8,7 +8,7 @@ import { getCommand, getCommandArgumentDefinition } from '../arguments/command';
 type CommandType = 'track' | 'untrack' | 'log';
 
 export default function ({ createCommand }: CreateCommandParameters): Command {
-  return createCommand('Manage rendezvous logging')
+  return createCommand('Lists the node rendezvous events for a sideloaded channel or production/beta channel linked to the Roku developer\'s account.')
     .argument(...getChannelIdArgumentDefinition())
     .argument(...getCommandArgumentDefinition('Command for beacons', {
       default: 'log',
