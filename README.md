@@ -38,7 +38,7 @@ Returns data of the currently running application.
 roku app [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -52,7 +52,7 @@ Returns data of all installed applications.
 roku apps [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -72,7 +72,7 @@ including those that cannot be directly attributed to a channel.
 roku assets [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -107,9 +107,9 @@ Devices that are keyed may monitor channels from the Roku Channel Store that are
 roku beacons [channelId] [command = 'log'] [--ip <Roku device IP>]
 ```
 
-**channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
-**command** - log (default), track, untrack
-**ip** - IP of the Roku device
+* **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
+* **command** - log (default), track, untrack
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -126,7 +126,7 @@ Retrieves device information similar to that returned by roDeviceInfo.
 roku device [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -143,7 +143,7 @@ Developer mode must be enabled to use this command.
 roku fps [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -160,9 +160,9 @@ The binary data with an identifying MIME-type header is returned.
 roku icon [channelId] [iconPath] [--ip <Roku device IP>]
 ```
 
-**channelId** - channel id of the app for which icon should be downloaded
-**iconPath** - path where icon file should be downloaded
-**ip** - IP of the Roku device
+* **channelId** - channel id of the app for which icon should be downloaded
+* **iconPath** - path where icon file should be downloaded
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -192,9 +192,9 @@ to send keyboard alphanumeric characters when a keyboard screen is active, as de
 roku key [keyString] [type = 'press'] [--ip <Roku device IP>] [-u --escaped]
 ```
 
-**keyString** - key string which should be sent
-**type** - press (default), down, up
-**ip** - IP of the Roku device
+* **keyString** - key string which should be sent
+* **type** - press (default), down, up
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -210,10 +210,10 @@ Launches channel of given channel id with given content id and media type.
 roku launch [channelId] [--ip <Roku device IP>] [--mediaType <mediaType>] [--contentId <contentId>]
 ```
 
-**channelId** - channel id for a channel that should be launched
-**ip** - IP of the Roku device
-**mediaType** - optional media type for content of launched app
-**contentId** - optional content id for launched app
+* **channelId** - channel id for a channel that should be launched
+* **ip** - IP of the Roku device
+* **mediaType** - optional media type for content of launched app
+* **contentId** - optional content id for launched app
 
 Environment variables (command argument/option):
 
@@ -247,9 +247,9 @@ It will list multiple nodes if there are several that match.
 roku nodes [type = 'all'] [nodeId] [--ip <Roku device IP>]
 ```
 
-**type** - all (default), roots, find
-**nodeId** - node id used with type = 'find'
-**ip** - IP of the Roku device
+* **type** - all (default), roots, find
+* **nodeId** - node id used with type = 'find'
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -267,11 +267,11 @@ To use this command, the device must be keyed with the same developer ID/key tha
 roku package [appName] [path] [password] [--ip <Roku device IP>] [-p --password <password>]
 ```
 
-**appName** - name for the packaged app
-**path** - Path of the app archive file that should be packed
-**password** (argument) - password used for signing the package or rekey the device
-**ip** - IP of the Roku device
-**password** (option) - developer's password of Roku device
+* **appName** - name for the packaged app
+* **path** - Path of the app archive file that should be packed
+* **password** (argument) - password used for signing the package or rekey the device
+* **ip** - IP of the Roku device
+* **password** (option) - developer's password of Roku device
 
 Environment variables (command argument/option):
 
@@ -303,8 +303,8 @@ The channel's process ID (pid) is added to the output of this command.
 roku performance [channelId] [--ip <Roku device IP>]
 ```
 
-**channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
-**ip** - IP of the Roku device
+* **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -323,7 +323,7 @@ the running time of the content, audio format, and buffering.
 roku player [--ip <Roku device IP>]
 ```
 
-**ip** - IP of the Roku device
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -338,18 +338,18 @@ The channel ID must be provided; for sideloaded channels, use "dev" as the chann
 
 Options:
 
-* escaped - Specify whether special characters are escaped not (not escaped by default).
-* keys - Provide the name of one or more specific registry key values to be returned.
+* **escaped** - Specify whether special characters are escaped not (not escaped by default).
+* **keys** - Provide the name of one or more specific registry key values to be returned.
   To return multiple registry key values, OR the names together (for example, nextPaymentDate|lastPaymentDate).
-* sections - Provide the name of one or more specific registry sections to be returned.
+* **sections** - Provide the name of one or more specific registry sections to be returned.
   To return multiple registry sections, OR the names together (for example, paymentInfo|token).
 
 ```bash
 roku registry [channelId] [--ip <Roku device IP>] [-u, --escaped] [-k, --keys <keys>] [-s, --sections <sections>]
 ```
 
-**channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
-**ip** - IP of the Roku device
+* **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -366,10 +366,10 @@ Rekey the Roku device with the given signed package and signing password.
 roku rekey [password] [path] [--ip <Roku device IP>] [-p --password <password>]
 ```
 
-**password** (argument) - password used for signing the package or rekey the device
-**path** - Path to the already signed package that should be used for rekey
-**ip** - IP of the Roku device
-**password** (option) - developer's password of Roku device
+* **password** (argument) - password used for signing the package or rekey the device
+* **path** - Path to the already signed package that should be used for rekey
+* **ip** - IP of the Roku device
+* **password** (option) - developer's password of Roku device
 
 Environment variables (command argument/option):
 
@@ -403,9 +403,9 @@ Tracking a different channel clears any queued rendezvous events.
 roku rendezvous [channelId] [command = 'log'] [--ip <Roku device IP>]
 ```
 
-**channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
-**command** - log (default), track, untrack
-**ip** - IP of the Roku device
+* **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
+* **command** - log (default), track, untrack
+* **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
 
@@ -422,9 +422,9 @@ Takes a screenshot of the dev app and download it to the JPG file.
 roku screenshot [path] [--ip <Roku device IP>] [-p, --password <password>]
 ```
 
-**path** - Path where screenshot should be saved
-**ip** - IP of the Roku device
-**password** - developer's password of Roku device
+* **path** - Path where screenshot should be saved
+* **ip** - IP of the Roku device
+* **password** - developer's password of Roku device
 
 Environment variables (command argument/option):
 
@@ -442,9 +442,9 @@ Uploads archived (.zip) app to the Roku device.
 roku upload [path] [--ip <Roku device IP>] [-p, --password <password>]
 ```
 
-**path** - Path of the app archive file
-**ip** - IP of the Roku device
-**password** - developer's password of Roku device
+* **path** - Path of the app archive file
+* **ip** - IP of the Roku device
+* **password** - developer's password of Roku device
 
 Environment variables (command argument/option):
 

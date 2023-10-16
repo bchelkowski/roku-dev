@@ -5,5 +5,5 @@ export function getRokuIPOptionDefinition(): [string, string] {
 }
 
 export function getRokuIP(options: ParsedOptions): string {
-  return options.rokuIP as string;
+  return options.ip as string;
 }
