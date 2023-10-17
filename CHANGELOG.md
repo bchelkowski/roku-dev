@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/bchelkowski/roku-dev/compare/v1.0.5...v1.0.6) (2023-10-17)
+
+
+### Bug Fixes
+
+* adjust cleanup script ([15dcbfa](https://github.com/bchelkowski/roku-dev/commit/15dcbfa6825dc8c674998836e6174a8f39cfea60))
+* remove type from package.json ([c774e03](https://github.com/bchelkowski/roku-dev/commit/c774e03980a130e3524a4a34ce8c91fb83d1e649))
+
 ## [1.0.5](https://github.com/bchelkowski/roku-dev/compare/v1.0.4...v1.0.5) (2023-10-16)
 
 
