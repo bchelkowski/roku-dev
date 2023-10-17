@@ -84,7 +84,7 @@ export default async (options?: DeviceInfoOptions): Promise<DeviceInfoType> => {
     method: RequestMethod.GET,
     path: '/query/device-info',
     port: RokuPort.ECP,
-    rokuIP: args.rokuIP || options?.rokuIP,
+    rokuIP: options?.rokuIP || args.rokuIP,
   }).send();
 
   const parsedResponse = await xml2js.parseStringPromise(response.body || '', {

@@ -18,7 +18,7 @@ export default async (options?: DeleteAppOptions): Promise<void> => {
       method: RequestMethod.POST,
       path: '/plugin_install',
       port: RokuPort.GUI,
-      rokuIP: args.rokuIP || options?.rokuIP,
+      rokuIP: options?.rokuIP || args.rokuIP,
     }).send({ formData: { mysubmit: 'Delete', archive: '' } });
   } catch (error) {
     const rokuError = error as RokuRequestError;

@@ -24,7 +24,7 @@ export default async (options?: InstalledAppsOptions): Promise<Apps> => {
     method: RequestMethod.GET,
     path: '/query/apps',
     port: RokuPort.ECP,
-    rokuIP: args.rokuIP || options?.rokuIP,
+    rokuIP: options?.rokuIP || args.rokuIP,
   }).send();
   const parsedResponse = await xml2js.parseStringPromise(response.body || '', {
     explicitArray: false,

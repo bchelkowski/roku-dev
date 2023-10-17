@@ -71,7 +71,7 @@ export default async (options?: MediaPlayerOptions): Promise<MediaPlayerType> =>
     method: RequestMethod.GET,
     path: '/query/media-player',
     port: RokuPort.ECP,
-    rokuIP: args.rokuIP || options?.rokuIP,
+    rokuIP: options?.rokuIP || args.rokuIP,
   }).send();
 
   const parsedResponse = await xml2js.parseStringPromise(response.body || '', {

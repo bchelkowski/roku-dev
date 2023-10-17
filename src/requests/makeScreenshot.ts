@@ -20,7 +20,7 @@ export default async (options?: MakeScreenshotOptions): Promise<string | undefin
       method: RequestMethod.POST,
       path: '/plugin_inspect',
       port: RokuPort.GUI,
-      rokuIP: args.rokuIP || options?.rokuIP,
+      rokuIP: options?.rokuIP || args.rokuIP,
     }).send({ formData: { mysubmit: 'Screenshot' } });
     const [, screenshotUriPath] = response.body?.match(SCREENSHOT_URI_PATH) || [];
 

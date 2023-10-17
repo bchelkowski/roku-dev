@@ -21,7 +21,7 @@ export default async (options?: ChannelPerformanceOptions): Promise<void> => {
       method: RequestMethod.GET,
       path,
       port: RokuPort.ECP,
-      rokuIP: args.rokuIP || options?.rokuIP,
+      rokuIP: options?.rokuIP || args.rokuIP,
     }).send();
 
     const parsedResponse = await xml2js.parseStringPromise(response.body || '', {
