@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/bchelkowski/roku-dev/compare/v1.0.6...v1.0.7) (2023-10-17)
+
+
+### Bug Fixes
+
+* environmental variables should be used as fallback values ([b9bf310](https://github.com/bchelkowski/roku-dev/commit/b9bf3102551f5bc5d0c1a2f91540896c16c87bc2))
+* incorrect export require path ([7dc0a56](https://github.com/bchelkowski/roku-dev/commit/7dc0a56992d336c281e194896d1ac0f60f030043))
+
 ## [1.0.6](https://github.com/bchelkowski/roku-dev/compare/v1.0.5...v1.0.6) (2023-10-17)
 
 
