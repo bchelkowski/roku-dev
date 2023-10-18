@@ -14,7 +14,7 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
     .option(...getKeysOptionDefinition())
     .option(...getSectionsOptionDefinition())
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ args, logger, options }) => {
+    .action(async ({ args, options }) => {
       const keys = getKeys(options);
       const sections = getSections(options);
       const registryData = await registry({
@@ -24,8 +24,14 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
         sections: sections ? sections.split('|') : undefined,
       });
-      const registryString = JSON.stringify(registryData, null, '  ');
 
-      logger.info('Registry Data: %s', registryString);
+      console.table(registryData);
+
+      const sectionsData = (registryData.registry as { sections: object | undefined })?.sections;
+      if (sectionsData) {
+        const sectionsString = JSON.stringify(sectionsData, null, ' ');
+
+        console.log('sections: ', sectionsString);
+      }
     });
 }

@@ -6,11 +6,11 @@ import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 export default function ({ createCommand }: CreateCommandParameters): Command {
   return createCommand('Returns the recent number of rendered graphics frames per seconds (this value is separate from the video frame rate).')
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ logger, options }) => {
+    .action(async ({ options }) => {
       const fps = await graphicsFrameRate({
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
       });
 
-      logger.info('FPS: %j', fps);
+      console.table(fps);
     });
 }

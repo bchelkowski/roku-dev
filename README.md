@@ -123,9 +123,10 @@ Roku ECP - `query/device-info`
 Retrieves device information similar to that returned by roDeviceInfo.
 
 ```bash
-roku device [--ip <Roku device IP>]
+roku device [field] [--ip <Roku device IP>]
 ```
 
+* **field** - Field of the data object that should be picked
 * **ip** - IP of the Roku device
 
 Environment variables (command argument/option):
@@ -320,9 +321,10 @@ The information returned includes the current stream segment and position of the
 the running time of the content, audio format, and buffering.
 
 ```bash
-roku player [--ip <Roku device IP>]
+roku player [field] [--ip <Roku device IP>]
 ```
 
+* **field** - Field of the data object that should be picked
 * **ip** - IP of the Roku device
 
 Environment variables (command argument/option):

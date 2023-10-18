@@ -15,14 +15,13 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
       validator: ['log', 'track', 'untrack'],
     }))
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ args, logger, options }) => {
+    .action(async ({ args, options }) => {
       const rendezvousData = await rendezvous({
         channelId: getChannelId(args) || envVariables.CHANNEL_ID || '',
         command: getCommand<CommandType>(args),
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
       });
-      const rendezvousString = JSON.stringify(rendezvousData, null, '  ');
 
-      logger.info('Rendezvous: %s', rendezvousString);
+      console.table(rendezvousData);
     });
 }

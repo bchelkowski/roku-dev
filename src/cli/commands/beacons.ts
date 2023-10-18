@@ -15,13 +15,13 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
       validator: ['log', 'track', 'untrack'],
     }))
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ args, logger, options }) => {
+    .action(async ({ args, options }) => {
       const _beacons = await beacons({
         channelId: getChannelId(args) || envVariables.CHANNEL_ID || '',
         command: getCommand<CommandType>(args),
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
       });
 
-      logger.info('Beacons: %j', _beacons);
+      console.table(_beacons);
     });
 }

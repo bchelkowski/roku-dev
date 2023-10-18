@@ -13,14 +13,13 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
     }))
     .argument(...getNodeIdArgumentDefinition())
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ args, logger, options }) => {
+    .action(async ({ args, options }) => {
       const sgNodesData = await sgNodes({
         nodeId: getNodeId(options),
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
         type: getType(args),
       });
-      const sgNodesString = JSON.stringify(sgNodesData, null, '  ');
 
-      logger.info('Nodes: %s', sgNodesString);
+      console.table(sgNodesData);
     });
 }

@@ -6,11 +6,11 @@ import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 export default function ({ createCommand }: CreateCommandParameters): Command {
   return createCommand('Shows data of all installed apps')
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ logger, options }) => {
+    .action(async ({ options }) => {
       const apps = await installedApps({
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
       });
 
-      logger.info('Installed Apps: %j', apps);
+      console.table(apps);
     });
 }

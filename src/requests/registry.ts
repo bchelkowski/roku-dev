@@ -12,7 +12,7 @@ export type RegistryOptions = {
   sections?: string[];
 };
 
-export default async (options: RegistryOptions): Promise<{ [key: string]: string }> => {
+export default async (options: RegistryOptions): Promise<{ [key: string]: string | object }> => {
   if (!options.channelId) throw Error('Missing channelId');
 
   const queryParams = [];

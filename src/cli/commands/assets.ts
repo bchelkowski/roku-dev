@@ -6,11 +6,11 @@ import { getRokuIP, getRokuIPOptionDefinition } from '../options/rokuIP';
 export default function ({ createCommand }: CreateCommandParameters): Command {
   return createCommand('Returns a list of the assets that have been loaded into texture memory')
     .option(...getRokuIPOptionDefinition())
-    .action(async ({ logger, options }) => {
+    .action(async ({ options }) => {
       const _assets = await assets({
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
       });
 
-      logger.info('Assets: %j', _assets);
+      console.table(_assets);
     });
 }
