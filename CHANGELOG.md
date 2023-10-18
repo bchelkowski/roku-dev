@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/bchelkowski/roku-dev/compare/v1.0.7...v1.1.0) (2023-10-18)
+
+
+### Features
+
+* present commands output in tables ([955f8a1](https://github.com/bchelkowski/roku-dev/commit/955f8a15bf9a6e2036a257f596ce75cc9889a320))
+
 ## [1.0.7](https://github.com/bchelkowski/roku-dev/compare/v1.0.6...v1.0.7) (2023-10-17)
 
 
