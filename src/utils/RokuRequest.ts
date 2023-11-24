@@ -8,6 +8,8 @@ import { RokuPort } from './RokuPort.enum';
 type FormDataType = { [key: string]: string | ReadStream };
 type HeadersType = { [key: string]: string | string[] | undefined };
 
+const agent = new http.Agent({ keepAlive: false });
+
 export type RokuRequestOptions = {
   auth?: {
     password: string;
@@ -76,6 +78,7 @@ export default class RokuRequest {
   private sendRequest(data: RokuRequestData): Promise<RokuRequestResponse> {
     return new Promise((resolve, reject) => {
       const options: http.RequestOptions = {
+        agent: agent,
         headers: data.headers ?? {},
         hostname: this.options.rokuIP,
         method: this.options.method,
