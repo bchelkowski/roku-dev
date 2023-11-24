@@ -21,7 +21,7 @@
   "exports": {
     ".": {
       "import": "./dist/esm/src/index.js",
-      "require": "./dist/commonjs/src/index.js"
+      "require": "./dist/cjs/src/index.js"
     }
   },
   "keywords": [
