@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/bchelkowski/roku-dev/compare/v1.1.0...v1.2.0) (2023-11-24)
+
+
+### Features
+
+* upgrade to node 20 ([33ccd20](https://github.com/bchelkowski/roku-dev/commit/33ccd20ab9f88a273cc2b3337a0de4f5e4cead33))
+
 # [1.1.0](https://github.com/bchelkowski/roku-dev/compare/v1.0.7...v1.1.0) (2023-10-18)
 
 
