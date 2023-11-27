@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/bchelkowski/roku-dev/compare/v1.2.1...v1.2.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* incorrect types path in package.json ([af81447](https://github.com/bchelkowski/roku-dev/commit/af81447d10bf57736590cd60140b6c01b2bb2c0c))
+
 ## [1.2.1](https://github.com/bchelkowski/roku-dev/compare/v1.2.0...v1.2.1) (2023-11-24)
 
 
