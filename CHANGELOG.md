@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/bchelkowski/roku-dev/compare/v1.2.2...v1.2.3) (2023-12-18)
+
+
+### Bug Fixes
+
+* assets, beacons, fps, rendezvous and nodes requests and commands are not working properly ([3b7e0df](https://github.com/bchelkowski/roku-dev/commit/3b7e0dfade320dd05735de988598c6de1e8e57d7))
+
 ## [1.2.2](https://github.com/bchelkowski/roku-dev/compare/v1.2.1...v1.2.2) (2023-11-27)
 
 
