@@ -12,7 +12,7 @@ export default async (options?: GraphicsFrameRateOptions): Promise<void> => {
   try {
     const response = await new RokuRequest({
       method: RequestMethod.GET,
-      path: 'query/graphics-frame-rate',
+      path: '/query/graphics-frame-rate',
       port: RokuPort.ECP,
       rokuIP: options?.rokuIP || args.rokuIP,
     }).send();

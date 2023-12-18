@@ -11,9 +11,9 @@ export type RendezvousOptions = {
 };
 
 const CommandPath = {
-  log: 'query/sgrendezvous',
-  track: 'query/sgrendezvous/track',
-  untrack: 'query/sgrendezvous/untrack',
+  log: '/query/sgrendezvous',
+  track: '/sgrendezvous/track',
+  untrack: '/sgrendezvous/untrack',
 };
 
 const CommandRequestMethod = {
@@ -22,7 +22,7 @@ const CommandRequestMethod = {
   untrack: RequestMethod.POST,
 };
 
-export default async (options: RendezvousOptions): Promise<void> => {
+export default async (options: RendezvousOptions) => {
   let path = CommandPath[options.command];
 
   if (options.command === 'track' && options.channelId) {

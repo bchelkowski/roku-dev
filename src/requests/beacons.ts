@@ -17,9 +17,9 @@ const CommandRequestMethod = {
 };
 
 const CommandPath = {
-  log: 'query/fwbeacons',
-  track: 'query/fwbeacons/track',
-  untrack: 'query/fwbeacons/untrack',
+  log: '/query/fwbeacons',
+  track: '/fwbeacons/track',
+  untrack: '/fwbeacons/untrack',
 };
 
 export default async (options: BeaconsOptions): Promise<void> => {

@@ -9,17 +9,25 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
   return createCommand('Returns all/root or finds some rendered nodes')
     .argument(...getTypeArgumentDefinition('Type of returned nodes - can be: all, root or node', {
       default: 'all',
-      validator: ['all', 'root', 'find'],
+      validator: ['all', 'roots', 'find'],
     }))
     .argument(...getNodeIdArgumentDefinition())
     .option(...getRokuIPOptionDefinition())
     .action(async ({ args, options }) => {
-      const sgNodesData = await sgNodes({
+      const _sgNodes = await sgNodes({
         nodeId: getNodeId(options),
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
         type: getType(args),
       });
 
-      console.table(sgNodesData);
+      if (_sgNodes.All_Nodes) {
+        console.table(_sgNodes.All_Nodes);
+      } else if (_sgNodes.Nodes_Nodes) {
+        console.table(_sgNodes.Nodes_Nodes);
+      } else if (_sgNodes.Root_Nodes) {
+        console.table(_sgNodes.Root_Nodes);
+      } else {
+        console.table(_sgNodes);
+      }
     });
 }

@@ -12,5 +12,6 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
       });
 
       console.table(_assets);
+      console.table(_assets['graphics-instances'].rographics);
     });
 }

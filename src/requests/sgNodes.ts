@@ -11,9 +11,9 @@ export type SGNodesOptions = {
 };
 
 const TypePath = {
-  all: 'query/sgnodes/all',
-  find: 'query/sgnodes/nodes?node-id=',
-  roots: 'query/sgnodes/roots',
+  all: '/query/sgnodes/all',
+  find: '/query/sgnodes/nodes?node-id=',
+  roots: '/query/sgnodes/roots',
 };
 
 export default async (options: SGNodesOptions) => {
@@ -35,7 +35,7 @@ export default async (options: SGNodesOptions) => {
       explicitArray: false,
     });
 
-    return parsedResponse;
+    return parsedResponse.sgnodes;
   } catch (error) {
     const rokuError = error as RokuRequestError;
 
