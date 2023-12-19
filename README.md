@@ -60,7 +60,7 @@ Environment variables (command argument/option):
 
 ### assets
 
-Roku ECP - `query/r2d2-bitmaps`
+Roku ECP - GET `query/r2d2-bitmaps`
 
 Returns a list of the assets that have been loaded into texture memory
 and the amount of used, available, and maximum memory on your device (in bytes).
@@ -82,10 +82,10 @@ Environment variables (command argument/option):
 
 Roku ECP:
 
-* `query/fwbeacons`
-* `query/fwbeacons/track`
-* `query/fwbeacons/track/<channelId>`
-* `query/fwbeacons/untrack`
+* GET `query/fwbeacons`
+* POST `fwbeacons/track`
+* POST `fwbeacons/track/<channelId>`
+* POST `fwbeacons/untrack`
 
 Tracks channel and media lifecycle events for a specific channel.
 To use these commands, the device must have developer mode enabled.
@@ -104,7 +104,7 @@ Devices that are keyed may monitor channels from the Roku Channel Store that are
 * **untrack** - Disables tracking of channel and media lifecycle events (if enabled) and discards all queued events.
 
 ```bash
-roku beacons [channelId] [command = 'log'] [--ip <Roku device IP>]
+roku beacons [command = 'log'] [channelId] [--ip <Roku device IP>]
 ```
 
 * **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account
@@ -118,7 +118,7 @@ Environment variables (command argument/option):
 
 ### device
 
-Roku ECP - `query/device-info`
+Roku ECP - GET `query/device-info`
 
 Retrieves device information similar to that returned by roDeviceInfo.
 
@@ -135,7 +135,7 @@ Environment variables (command argument/option):
 
 ### fps
 
-Roku ECP - `query/graphics-frame-rate`
+Roku ECP - GET `query/graphics-frame-rate`
 
 Returns the recent number of rendered graphics frames per seconds (this value is separate from the video frame rate).
 Developer mode must be enabled to use this command.
@@ -152,7 +152,7 @@ Environment variables (command argument/option):
 
 ### icon
 
-Roku ECP - `query/icon/<CHANNEL_ID>`
+Roku ECP - GET `query/icon/<CHANNEL_ID>`
 
 Downloads under iconPath an icon file corresponding to the application identified by channelId.
 The binary data with an identifying MIME-type header is returned.
@@ -171,13 +171,34 @@ Environment variables (command argument/option):
 * **ICON_PATH** (iconPath)
 * **ROKU_IP** (ip)
 
+### input
+
+Roku ECP - POST `input?<query>`
+
+Sends custom events to the current application.
+It takes a user-defined list of name-value pairs sent as query string URI parameters.
+Eg. `contentId=contentId1234&mediaType=episode`
+The external control server places these name-value pairs into an associative array,
+and passes them directly through to the currently executing channel script
+using a Message Port attached to a created roInput object.
+
+```bash
+roku input <query> [--ip <Roku device IP>]
+```
+
+* **ip** - IP of the Roku device
+
+Environment variables (command argument/option):
+
+* **ROKU_IP** (ip)
+
 ### key
 
 Roku ECP:
 
-* `keydown/<KEY>`
-* `keyup/<KEY>`
-* `keypress/<KEY>`
+* POST `keydown/<KEY>`
+* POST `keyup/<KEY>`
+* POST `keypress/<KEY>`
 
 Sends key press/down/up
 
@@ -225,9 +246,9 @@ Environment variables (command argument/option):
 
 Roku ECP:
 
-* `query/sgnodes/all`
-* `query/sgnodes/roots`
-* `query/sgnodes/nodes?node-id=nodeId`
+* GET `query/sgnodes/all`
+* GET `query/sgnodes/roots`
+* GET `query/sgnodes/nodes?node-id=nodeId`
 
 Returns all/root or finds some rendered nodes.
 
@@ -286,8 +307,8 @@ Environment variables (command argument/option):
 
 Roku ECP:
 
-* `query/chanperf`
-* `query/chanperf/<channelld>?duration-seconds=<seconds>`
+* GET `query/chanperf`
+* GET `query/chanperf/<channelld>?duration-seconds=<seconds>`
 
 Returns the current memory and CPU utilization of the channel running in the foreground (RAM usage is reported bytes).
 The foreground channel may either be a sideloaded channel or a channel from the Roku Channel Store.
@@ -314,7 +335,7 @@ Environment variables (command argument/option):
 
 ### player
 
-Roku ECP - `query/media-player`
+Roku ECP - GET `query/media-player`
 
 Returns a child element named 'player' that identifies the media player state.
 The information returned includes the current stream segment and position of the content being played,
@@ -333,7 +354,7 @@ Environment variables (command argument/option):
 
 ### registry
 
-Roku ECP - `query/registry/<CHANNEL_ID>`
+Roku ECP - GET `query/registry/<CHANNEL_ID>`
 
 Lists the entries in the device registry for a sideloaded channel or production/beta channel linked to the Roku developer's account.
 The channel ID must be provided; for sideloaded channels, use "dev" as the channelId.
@@ -384,9 +405,9 @@ Environment variables (command argument/option):
 
 Roku ECP:
 
-* `query/sgrendezvous`
-* `query/sgrendezvous/track`
-* `query/sgrendezvous/untrack`
+* GET `query/sgrendezvous`
+* POST `sgrendezvous/track`
+* POST `sgrendezvous/untrack`
 
 Lists the node rendezvous events for a sideloaded channel or production/beta channel linked to the Roku developer's account.
 
@@ -402,7 +423,7 @@ Tracking a different channel clears any queued rendezvous events.
 * **untrack** - Stops the tracking of rendezvous events.
 
 ```bash
-roku rendezvous [channelId] [command = 'log'] [--ip <Roku device IP>]
+roku rendezvous [command = 'log'] [channelId] [--ip <Roku device IP>]
 ```
 
 * **channelId** - channel id for a sideloaded channel or production/beta channel linked to the Roku developer's account

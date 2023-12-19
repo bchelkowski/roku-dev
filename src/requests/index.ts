@@ -7,7 +7,7 @@ export { default as downloadIcon, DownloadIconOptions } from './downloadIcon';
 export { default as downloadPackage, DownloadPackageOptions } from './downloadPackage';
 export { default as downloadScreenshot, DownloadScreenshotOptions } from './downloadScreenshot';
 export { default as graphicsFrameRate, GraphicsFrameRateOptions } from './graphicsFrameRate';
-export { default as input, InputOptions, InputType } from './input';
+export { default as input, InputOptions } from './input';
 export { default as installedApps, InstalledAppsOptions } from './installedApps';
 export { default as keyDown, KeyOptions } from './keyDown';
 export { default as keyPress } from './keyPress';

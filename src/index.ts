@@ -46,7 +46,6 @@ export {
   DownloadScreenshotOptions,
   GraphicsFrameRateOptions,
   InputOptions,
-  InputType,
   InstalledAppsOptions,
   KeyOptions,
   LaunchOptions,

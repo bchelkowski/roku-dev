@@ -3,17 +3,13 @@ import { RequestMethod } from '../utils/RequestMethod.enum';
 import { RokuPort } from '../utils/RokuPort.enum';
 import RokuRequest from '../utils/RokuRequest';
 
-export type InputType = { [key: string]: string };
-
 export type InputOptions = {
-  input: InputType;
+  query: string;
   rokuIP?: string;
 };
 
 export default (options: InputOptions) => {
-  const inputEntries = Object.entries(options.input);
-  const query = inputEntries.map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  const path = `/input?${query}`;
+  const path = `/input?${options.query}`;
 
   return new RokuRequest({
     method: RequestMethod.POST,

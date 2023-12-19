@@ -15,7 +15,7 @@ export default function ({ createCommand }: CreateCommandParameters): Command {
     .option(...getRokuIPOptionDefinition())
     .action(async ({ args, options }) => {
       const _sgNodes = await sgNodes({
-        nodeId: getNodeId(options),
+        nodeId: getNodeId(args),
         rokuIP: getRokuIP(options) || envVariables.ROKU_IP || '',
         type: getType(args),
       });
