@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/bchelkowski/roku-dev/compare/v1.2.3...v1.3.0) (2023-12-19)
+
+
+### Features
+
+* add input command ([4f2ec40](https://github.com/bchelkowski/roku-dev/commit/4f2ec40d3a51312c08c28fa1b4e1450726727afc))
+
 ## [1.2.3](https://github.com/bchelkowski/roku-dev/compare/v1.2.2...v1.2.3) (2023-12-18)
 
 
